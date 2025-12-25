@@ -28,8 +28,8 @@ A cute pixel art egg timer web application to help you cook the perfect egg ever
 ## 🛠️ Technologies Used
 
 - HTML5
-- CSS3 (with custom animations and pixel font)
-- Vanilla JavaScript
+- CSS (with custom animations and pixel font)
+- JavaScript
 - Google Fonts (Press Start 2P)
 
 ## 🎨 Design Tools
