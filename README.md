@@ -2,6 +2,11 @@
 
 A cute pixel art egg timer web application to help you cook the perfect egg every time! 🥚 
 
+## Live Demo
+
+Here is a live demo of the project: (https://drive.google.com/file/d/1xdImbbDPDviQJYhNgiBXlVpo4rF3wfQq/view?usp=sharing)
+
+
 ## ✨ Features
 
 - **4 Egg Types**: Choose from Soft Boiled, Medium Boiled, Hard Boiled, and Extra Hard Boiled
