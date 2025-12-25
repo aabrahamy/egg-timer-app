@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: transparent;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Screen management - only show active screen */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Container styling */
+.container {
+    background: #fff0d4;
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+    width: 700px;
+    box-shadow: none;
+    overflow: hidden;
+
+    /* Make the panel draggable for frameless window */
+    -webkit-app-region: drag;
+    position: relative;
+}
+
+/* Window control button (close) - not draggable so clicks work */
+.window-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    line-height: 1;
+    color: #4A4A4A;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    -webkit-app-region: no-drag;
+}
+
+.window-btn:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+/* Ensure interactive elements inside the draggable container are clickable */
+.container button,
+.container a,
+.container input,
+.container textarea,
+.container select {
+    -webkit-app-region: no-drag;
+}
+
+
+h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+button {
+    background: #FFB6C1;
+    border: 3px solid #8B6F47;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: #FF9FB0;
+    transform: scale(1.05);
+}
+
+/* Egg grid for selection */
+.egg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 40px; /* Reduced horizontal gap */
+    margin-top: 40px;
+    padding: 0 20px; /* Less side padding */
+    justify-items: center; /* Center the eggs in their grid cells */
+}
+
+.egg-grid button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: none;
+    border: none;
+    width: 100%; /* Take full width of grid cell */
+}
+
+.egg-grid button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.egg-grid button p {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 11px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: lowercase; /* Add this line! */
+}
+
+.egg-image {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+/* Egg animation */
+.egg {
+    font-size: 100px;
+    margin: 30px 0;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Timer egg image */
+.timer-egg {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 30px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="homeScreen" class="screen active">
+        <div class="container">
+            <button class="window-btn" onclick="closeWindow()" aria-label="Close">✕</button>
+            <h1>Let's time your egg!</h1>
+            <button onclick="showSelection()">Start</button>
+        </div>
+    </div>
+
+    <!-- Selection Screen -->
+<div id="selectionScreen" class="screen">
+    <div class="container">
+        <button class="window-btn" onclick="closeWindow()" aria-label="Close">✕</button>
+        <h2>what are you making today?</h2>
+        <div class="egg-grid">
+            <button onclick="startTimer(180)">
+                <img src="egg1.png" alt="soft boiled" class="egg-image">
+                <p>Soft Boiled</p>
+            </button>
+            <button onclick="startTimer(300)">
+                <img src="egg2.png" alt="medium boiled" class="egg-image">
+                <p>Medium Boiled</p>
+            </button>
+            <button onclick="startTimer(420)">
+                <img src="egg3.png" alt="hard boiled" class="egg-image">
+                <p>Hard Boiled</p>
+            </button>
+            <button onclick="startTimer(600)">
+                <img src="egg4.png" alt="xtra hard" class="egg-image">
+                <p>Extra Hard</p>
+            </button>
+        </div>
+    </div>
+</div>
+ <!-- Timer Screen -->
+<div id="timerScreen" class="screen">
+    <div class="container">
+        <button class="window-btn" onclick="closeWindow()" aria-label="Close">✕</button>
+        <h2>your egg is ready in...</h2>
+        <img src="egg sleeping.png" alt="Sleeping Egg" class="timer-egg" id="timerEgg">
+        <div id="timerDisplay" class="timer">00:00</div>
+    </div>
+</div>
+
+    <!-- Complete Screen -->
+    <div id="completeScreen" class="screen">
+        <div class="container">
+            <button class="window-btn" onclick="closeWindow()" aria-label="Close">✕</button>
+            <h2>your egg is done!</h2>
+            <div class="egg">🍳</div>
+            <button onclick="snooze()">Snooze</button>
+            <button onclick="reset()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
